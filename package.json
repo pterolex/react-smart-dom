@@ -1,6 +1,6 @@
 {
   "name": "react-smart-dom",
-  "version": "0.1.0-alpha1",
+  "version": "0.1.0",
   "description": "React Smart DOM – React.js renderer for the smart home",
   "main": "lib/index.js",
   "scripts": {
