@@ -82,7 +82,7 @@ const assignCallback = async (id, address, token, type, propName, callback) => {
         id, address, token, type,
     });
 
-    // console.log(chalk.green('AssignCallback/Connected to'), device);
+    // console.log(chalk.green('AssignCallback/Connected to'), type, device);
 
     const capabilityString = `cap:${type}`;
 
@@ -96,7 +96,6 @@ const assignCallback = async (id, address, token, type, propName, callback) => {
     }
 
     if (device.matches('type:button') && !callbacks['type:button'] && propName === 'onPress') {
-        // // console.log('child', device);
         callbacks['type:button'] = true;
         device.on('action', callback);
     }

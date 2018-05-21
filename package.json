@@ -4,7 +4,7 @@
   "description": "React Smart DOM – React.js renderer for the smart home",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint src",
     "posttest": "yarn lint",
     "build": "babel src -d lib",
     "start": "yarn build && node lib/app/sensorExample.js"

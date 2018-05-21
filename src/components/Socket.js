@@ -2,7 +2,6 @@ import React from 'react';
 
 class PowerSocket extends React.Component {
     handleStateChange = (data) => {
-        console.log('PowerSocket/action', data);
         const {
             onStateChange,
         } = this.props;
