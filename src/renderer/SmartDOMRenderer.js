@@ -22,6 +22,10 @@ const RendererHostConfig = {
         return instance;
     },
 
+    appendChildToContainer(parentInstance, child) {
+
+    },
+
     createTextInstance(text, rootContainerInstance, internalInstanceHandle) {
         return text
     },
@@ -74,9 +78,15 @@ const RendererHostConfig = {
         // return false // The hardware does not have a text node like DOM
     },
 
+
+    commitUpdate(instance, updatePayload, type, oldProps, newProps, internalInstanceHandle) {
+        updateProperties(instance, updatePayload, type, oldProps, newProps, internalInstanceHandle);
+    },
+
     now: () => { },
 
     useSyncScheduling: true,
+    supportsMutation: true,
 
     mutation: {
         appendChild(parentInstance, child) {
